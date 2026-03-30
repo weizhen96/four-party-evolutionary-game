@@ -9,7 +9,6 @@ for i=0.1:0.2:1
             for l=0.1:0.2:1
             [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 50],[i j k l]);
             grid on
-            %搞清楚你画的是哪三维的关系
             plot3(y(:,1),y(:,2),y(:,3),'linewidth',1);
             set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
             set(gca,'XTickLabel',num2str(get(gca,'XTick')','%.1f'));
