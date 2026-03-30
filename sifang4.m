@@ -1,4 +1,3 @@
-%% ²ßÂÔÑÝ»¯Í¼ Ìõ¼þ1
 clc;clear; 
 C1=15, C2=95, C3=120, C4=100, V=150,a=0.2, b=0.8, E1=200, E2=100, Fa=60, Rd=50, Rg=80, L=50, Fi=50, T=40;  
 figure(10)
@@ -9,7 +8,6 @@ for i=0.1:0.2:1
             for l=0.1:0.2:1
             [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[i j k l]);
             grid on
-            %¸ãÇå³þÄã»­µÄÊÇÄÄÈýÎ¬µÄ¹ØÏµ
             plot3(y(:,1),y(:,2),y(:,3),'linewidth',1);
             set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
             set(gca,'XTickLabel',num2str(get(gca,'XTick')','%.1f'));
@@ -26,7 +24,6 @@ ylabel('$y$','interpreter','latex');
 zlabel('$z$','interpreter','latex','Rotation',360);
 title('g=0','interpreter','latex');
 
-%% ²ßÂÔÑÝ»¯Í¼ Ìõ¼þ2
 clc;clear; 
 C1=20, C2=75, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=50, Fi=50, T=40;  
 figure(10)
@@ -37,7 +34,6 @@ for i=0.1:0.2:1
             for l=0.1:0.2:1
             [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[i j k l]);
             grid on
-            %¸ãÇå³þÄã»­µÄÊÇÄÄÈýÎ¬µÄ¹ØÏµ
             plot3(y(:,1),y(:,2),y(:,3),'linewidth',1);
             set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
             set(gca,'XTickLabel',num2str(get(gca,'XTick')','%.1f'));
@@ -54,7 +50,6 @@ ylabel('$y$','interpreter','latex');
 zlabel('$z$','interpreter','latex','Rotation',360);
 title('g=0','interpreter','latex');
 
-%% ²ßÂÔÑÝ»¯Í¼ Ìõ¼þ3
 clc;clear; 
 C1=15, C2=100, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;  
 figure(10)
@@ -65,7 +60,6 @@ for i=0.1:0.2:1
             for l=0.1:0.2:1
             [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[i j k l]);
             grid on
-            %¸ãÇå³þÄã»­µÄÊÇÄÄÈýÎ¬µÄ¹ØÏµ
             plot3(y(:,1),y(:,2),y(:,3),'linewidth',1);
             set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
             set(gca,'XTickLabel',num2str(get(gca,'XTick')','%.1f'));
@@ -82,7 +76,6 @@ ylabel('$y$','interpreter','latex');
 zlabel('$z$','interpreter','latex','Rotation',360);
 title('g=0','interpreter','latex');
 
-%% ²ßÂÔÑÝ»¯Í¼ Ìõ¼þ4
 clc;clear; 
 C1=10, C2=70, C3=105, C4=100, V=150, a=0.3, b=0.9, Fa=30, Rd=50, Rg=80, L=90, Fi=50, T=40;  
 figure(10)
@@ -93,7 +86,6 @@ for i=0.1:0.2:1
             for l=0.1:0.2:1
             [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[i j k l]);
             grid on
-            %¸ãÇå³þÄã»­µÄÊÇÄÄÈýÎ¬µÄ¹ØÏµ
             plot3(y(:,1),y(:,2),y(:,3),'linewidth',1);
             set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
             set(gca,'XTickLabel',num2str(get(gca,'XTick')','%.1f'));
@@ -110,830 +102,763 @@ ylabel('$y$','interpreter','latex');
 zlabel('$z$','interpreter','latex','Rotation',360);
 title('g=0','interpreter','latex');
 
-%% ÈýÎ¬x-y-z²ÎÊý
-%% Í¼ ¹¥»÷·½²ÎÊýÓ°Ïì x=0.1
 clc,clear;
 figure(1);    
 C1=20, C2=75, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=50, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 50],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'ro:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'ro','linewidth',1); %ÈýÎ¬»ð²ñ¹÷Í¼
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
+%stem3(y(:,1),y(:,2),y(:,3),'ro','linewidth',1);
 hold on ;
 C1=20, C2=75, C3=120, C4=100, V=150, a=0.3, b=0.9, Fa=60, Rd=50, Rg=80, L=50, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 50],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'bd:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'b-','linewidth',1);%ÈýÎ¬»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'b-','linewidth',1);
 hold on ;  
 C1=20, C2=75, C3=120, C4=100, V=150, a=0.4, b=1, Fa=60, Rd=50, Rg=80, L=50, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'gs:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%ÈýÎ¬»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);
 hold on  ; 
-%×ø±ê¿Ì¶È¼ä¸ô¼°ÆäÇø¼ä£¬×ø±ê±ê×¢
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
 axis([0 1 0 1 0 1])
 xlabel('$x$','interpreter','latex');ylabel('$y$','interpreter','latex');zlabel('$z$','interpreter','latex','Rotation',360,'position',[-0.1 1 1.1]);
-%Í¼ÏóÍø¸ñ£¬µ×Í¼¼Ó°×
 grid on
 hold on
 set(0,'defaultfigurecolor','w')
-%Í¼Àý¼°±êÌâ
 legend({'{\it\fontname{Bodoni MT}C1-C2_{p}}=55','{\it\fontname{Bodoni MT}C1-C2_{p}}=65','{\it\fontname{Bodoni MT}C1-C2_{p}}=75'},'location','northeast');
 title('(a)','FontWeight','bold','position',[0 0 -0.2]);
-%¼ÓÉÏ±ê×¢ºÍ¼ýÍ·
 text(0.4 ,0.2 ,0.3,'$ESS$','interpreter','latex');
 annotation('arrow',[0.55 0.35],[0.35 0.32]);
 annotation('arrow',[0.58 0.58],[0.38 0.45]);
 % the small figure
-axes('position',[0.13 0.32 0.2 0.2]); %Ð¡Í¼µÄ¹Ø¼üÓï¾äÈ·¶¨Ð¡Í¼µÄ´óÐ¡Î»ÖÃ
-% z-xÐ¡Í¼ÖÐµÄÏßÌõ
-%Ð¡Í¼ÖÐµÄÏßÌõ
+axes('position',[0.13 0.32 0.2 0.2]); 
 C1=20, C2=75, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=50, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'ro:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'r+','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'r+','linewidth',1);
 hold on 
 C1=20, C2=75, C3=120, C4=100, V=150, a=0.3, b=0.9, Fa=60, Rd=50, Rg=80, L=50, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'bd:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);
 hold on
 C1=20, C2=75, C3=120, C4=100, V=150, a=0.4, b=1, Fa=60, Rd=50, Rg=80, L=50, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'gs:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);
 hold on
-%×ø±ê¿Ì¶È¼ä¸ô¼°Çø¼ä£¬µ«²»ÏÔÊ¾
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
 axis([0 1 0 1 0 1])
 set(gca,'XTickLabel','','YTickLabel','','ZTickLabel','')
-%±³¾°Íø¸ñ²¢ÉèÖÃ°×µ×
 grid on
 hold on  
 set(0,'defaultfigurecolor','w')
-%Í¼ÏóÏÔÊ¾ÊÓ½Ç£¬ÒÔ¼°ÏàÓ¦µÄ×ø±ê±ê×¢
-view([0 0]); %z-xÐ¡Í¼
+view([0 0]);    
 xlabel('x','position',[0.8 1 0.3])
 zlabel('z','position',[0.1 1 0.8],'Rotation',360)
 
-%% Í¼ ¹¥»÷·½²ÎÊýÓ°Ïì x=0.5
 clc,clear;
 figure(1);    
 C1=20, C2=75, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=50, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 50],[0.5 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'ro:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'ro','linewidth',1); %ÈýÎ¬»ð²ñ¹÷Í¼
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
+%stem3(y(:,1),y(:,2),y(:,3),'ro','linewidth',1); 
 hold on ;
 C1=20, C2=75, C3=120, C4=100, V=150, a=0.3, b=0.9, Fa=60, Rd=50, Rg=80, L=50, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 50],[0.5 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'bd:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'b-','linewidth',1);%ÈýÎ¬»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'b-','linewidth',1);
 hold on ;  
 C1=20, C2=75, C3=120, C4=100, V=150, a=0.4, b=1, Fa=60, Rd=50, Rg=80, L=50, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.5 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'gs:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%ÈýÎ¬»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);
 hold on  ; 
-%×ø±ê¿Ì¶È¼ä¸ô¼°ÆäÇø¼ä£¬×ø±ê±ê×¢
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
 axis([0 1 0 1 0 1])
 xlabel('$x$','interpreter','latex');ylabel('$y$','interpreter','latex');zlabel('$z$','interpreter','latex','Rotation',360,'position',[-0.1 1 1.1]);
-%Í¼ÏóÍø¸ñ£¬µ×Í¼¼Ó°×
 grid on
 hold on
 set(0,'defaultfigurecolor','w')
-%Í¼Àý¼°±êÌâ
 legend({'{\it\fontname{Bodoni MT}C1-C2_{p}}=55','{\it\fontname{Bodoni MT}C1-C2_{p}}=65','{\it\fontname{Bodoni MT}C1-C2_{p}}=75'},'location','northeast');
 title('(a)','FontWeight','bold','position',[0 0 -0.2]);
-%¼ÓÉÏ±ê×¢ºÍ¼ýÍ·
 text(0.4 ,0.2 ,0.3,'$ESS$','interpreter','latex');
 annotation('arrow',[0.55 0.35],[0.35 0.32]);
 annotation('arrow',[0.58 0.58],[0.38 0.45]);
 % the small figure
-axes('position',[0.13 0.32 0.2 0.2]); %Ð¡Í¼µÄ¹Ø¼üÓï¾äÈ·¶¨Ð¡Í¼µÄ´óÐ¡Î»ÖÃ
-% z-xÐ¡Í¼ÖÐµÄÏßÌõ
-%Ð¡Í¼ÖÐµÄÏßÌõ
+axes('position',[0.13 0.32 0.2 0.2]); 
+
 C1=20, C2=75, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=50, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.5 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'ro:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'r+','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'r+','linewidth',1);
 hold on 
 C1=20, C2=75, C3=120, C4=100, V=150, a=0.3, b=0.9, Fa=60, Rd=50, Rg=80, L=50, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.5 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'bd:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);
 hold on
 C1=20, C2=75, C3=120, C4=100, V=150, a=0.4, b=1, Fa=60, Rd=50, Rg=80, L=50, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.5 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'gs:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);
 hold on
-%×ø±ê¿Ì¶È¼ä¸ô¼°Çø¼ä£¬µ«²»ÏÔÊ¾
+
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
 axis([0 1 0 1 0 1])
 set(gca,'XTickLabel','','YTickLabel','','ZTickLabel','')
-%±³¾°Íø¸ñ²¢ÉèÖÃ°×µ×
 grid on
 hold on  
 set(0,'defaultfigurecolor','w')
-%Í¼ÏóÏÔÊ¾ÊÓ½Ç£¬ÒÔ¼°ÏàÓ¦µÄ×ø±ê±ê×¢
-view([0 0]); %z-xÐ¡Í¼
+view([0 0]); 
 xlabel('x','position',[0.8 1 0.3])
 zlabel('z','position',[0.1 1 0.8],'Rotation',360)
 
-%% Í¼ ¹¥»÷·½²ÎÊýÓ°Ïì x=0.9
 clc,clear;
 figure(1);    
 C1=20, C2=75, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=50, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 50],[0.9 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'ro:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'ro','linewidth',1); %ÈýÎ¬»ð²ñ¹÷Í¼
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
+%stem3(y(:,1),y(:,2),y(:,3),'ro','linewidth',1); 
 hold on ;
 C1=20, C2=75, C3=120, C4=100, V=150, a=0.3, b=0.9, Fa=60, Rd=50, Rg=80, L=50, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 50],[0.9 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'bd:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'b-','linewidth',1);%ÈýÎ¬»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'b-','linewidth',1);
 hold on ;  
 C1=20, C2=75, C3=120, C4=100, V=150, a=0.4, b=1, Fa=60, Rd=50, Rg=80, L=50, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.9 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'gs:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%ÈýÎ¬»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);
 hold on  ; 
-%×ø±ê¿Ì¶È¼ä¸ô¼°ÆäÇø¼ä£¬×ø±ê±ê×¢
+
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
 axis([0 1 0 1 0 1])
 xlabel('$x$','interpreter','latex');ylabel('$y$','interpreter','latex');zlabel('$z$','interpreter','latex','Rotation',360,'position',[-0.1 1 1.1]);
-%Í¼ÏóÍø¸ñ£¬µ×Í¼¼Ó°×
+
 grid on
 hold on
 set(0,'defaultfigurecolor','w')
-%Í¼Àý¼°±êÌâ
 legend({'{\it\fontname{Bodoni MT}C1-C2_{p}}=55','{\it\fontname{Bodoni MT}C1-C2_{p}}=65','{\it\fontname{Bodoni MT}C1-C2_{p}}=75'},'location','northeast');
 title('(a)','FontWeight','bold','position',[0 0 -0.2]);
-%¼ÓÉÏ±ê×¢ºÍ¼ýÍ·
 text(0.4 ,0.2 ,0.3,'$ESS$','interpreter','latex');
 annotation('arrow',[0.55 0.35],[0.35 0.32]);
 annotation('arrow',[0.58 0.58],[0.38 0.45]);
 % the small figure
-axes('position',[0.13 0.32 0.2 0.2]); %Ð¡Í¼µÄ¹Ø¼üÓï¾äÈ·¶¨Ð¡Í¼µÄ´óÐ¡Î»ÖÃ
-% z-xÐ¡Í¼ÖÐµÄÏßÌõ
-%Ð¡Í¼ÖÐµÄÏßÌõ
+axes('position',[0.13 0.32 0.2 0.2]); 
 C1=20, C2=75, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=50, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.9 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'ro:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'r+','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'r+','linewidth',1);
 hold on 
 C1=20, C2=75, C3=120, C4=100, V=150, a=0.3, b=0.9, Fa=60, Rd=50, Rg=80, L=50, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.9 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'bd:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);
 hold on
 C1=20, C2=75, C3=120, C4=100, V=150, a=0.4, b=1, Fa=60, Rd=50, Rg=80, L=50, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.9 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'gs:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);
 hold on
-%×ø±ê¿Ì¶È¼ä¸ô¼°Çø¼ä£¬µ«²»ÏÔÊ¾
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
 axis([0 1 0 1 0 1])
 set(gca,'XTickLabel','','YTickLabel','','ZTickLabel','')
-%±³¾°Íø¸ñ²¢ÉèÖÃ°×µ×
 grid on
 hold on  
 set(0,'defaultfigurecolor','w')
-%Í¼ÏóÏÔÊ¾ÊÓ½Ç£¬ÒÔ¼°ÏàÓ¦µÄ×ø±ê±ê×¢
-view([0 0]); %z-xÐ¡Í¼
+view([0 0]); 
 xlabel('x','position',[0.8 1 0.3])
 zlabel('z','position',[0.1 1 0.8],'Rotation',360)
 
-%% Í¼ ·ÀÓù·½²ÎÊýÓ°Ïì x=0.1
 clc,clear;
 figure(1);    
 C1=15, C2=100, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 50],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'ro:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'ro','linewidth',1); %ÈýÎ¬»ð²ñ¹÷Í¼
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
+%stem3(y(:,1),y(:,2),y(:,3),'ro','linewidth',1); 
 hold on ;
 C1=15, C2=150, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 50],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'bd:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'b-','linewidth',1);%ÈýÎ¬»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'b-','linewidth',1);
 hold on ;  
 C1=15, C2=200, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'gs:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%ÈýÎ¬»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);
 hold on  ; 
-%×ø±ê¿Ì¶È¼ä¸ô¼°ÆäÇø¼ä£¬×ø±ê±ê×¢
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
 axis([0 1 0 1 0 1])
 xlabel('$x$','interpreter','latex');ylabel('$y$','interpreter','latex');zlabel('$z$','interpreter','latex','Rotation',360,'position',[-0.1 1 1.1]);
-%Í¼ÏóÍø¸ñ£¬µ×Í¼¼Ó°×
 grid on
 hold on
 set(0,'defaultfigurecolor','w')
-%Í¼Àý¼°±êÌâ
 legend({'{\it\fontname{Bodoni MT}C1-C2_{p}}=55','{\it\fontname{Bodoni MT}C1-C2_{p}}=65','{\it\fontname{Bodoni MT}C1-C2_{p}}=75'},'location','northeast');
 title('(a)','FontWeight','bold','position',[0 0 -0.2]);
-%¼ÓÉÏ±ê×¢ºÍ¼ýÍ·
 text(0.4 ,0.2 ,0.3,'$ESS$','interpreter','latex');
 annotation('arrow',[0.55 0.35],[0.35 0.32]);
 annotation('arrow',[0.58 0.58],[0.38 0.45]);
 % the small figure
-axes('position',[0.13 0.32 0.2 0.2]); %Ð¡Í¼µÄ¹Ø¼üÓï¾äÈ·¶¨Ð¡Í¼µÄ´óÐ¡Î»ÖÃ
-% z-xÐ¡Í¼ÖÐµÄÏßÌõ
-%Ð¡Í¼ÖÐµÄÏßÌõ
+axes('position',[0.13 0.32 0.2 0.2]); 
 C1=15, C2=100, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'ro:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'r+','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'r+','linewidth',1);
 hold on 
 C1=15, C2=150, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'bd:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);
 hold on
 C1=15, C2=200, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'gs:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);
 hold on
-%×ø±ê¿Ì¶È¼ä¸ô¼°Çø¼ä£¬µ«²»ÏÔÊ¾
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
 axis([0 1 0 1 0 1])
 set(gca,'XTickLabel','','YTickLabel','','ZTickLabel','')
-%±³¾°Íø¸ñ²¢ÉèÖÃ°×µ×
 grid on
 hold on  
 set(0,'defaultfigurecolor','w')
-%Í¼ÏóÏÔÊ¾ÊÓ½Ç£¬ÒÔ¼°ÏàÓ¦µÄ×ø±ê±ê×¢
-view([0 0]); %z-xÐ¡Í¼
+view([0 0]);    
 xlabel('x','position',[0.8 1 0.3])
 zlabel('z','position',[0.1 1 0.8],'Rotation',360)
 
-%% Í¼ ·ÀÓù·½²ÎÊýÓ°Ïì x=0.5
 clc,clear;
 figure(1);    
 C1=15, C2=100, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 50],[0.5 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'ro:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'ro','linewidth',1); %ÈýÎ¬»ð²ñ¹÷Í¼
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
+%stem3(y(:,1),y(:,2),y(:,3),'ro','linewidth',1); 
 hold on ;
 C1=15, C2=150, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 50],[0.5 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'bd:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'b-','linewidth',1);%ÈýÎ¬»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'b-','linewidth',1);
 hold on ;  
 C1=15, C2=200, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.5 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'gs:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%ÈýÎ¬»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);
 hold on  ; 
-%×ø±ê¿Ì¶È¼ä¸ô¼°ÆäÇø¼ä£¬×ø±ê±ê×¢
+
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
 axis([0 1 0 1 0 1])
 xlabel('$x$','interpreter','latex');ylabel('$y$','interpreter','latex');zlabel('$z$','interpreter','latex','Rotation',360,'position',[-0.1 1 1.1]);
-%Í¼ÏóÍø¸ñ£¬µ×Í¼¼Ó°×
 grid on
 hold on
 set(0,'defaultfigurecolor','w')
-%Í¼Àý¼°±êÌâ
 legend({'{\it\fontname{Bodoni MT}C1-C2_{p}}=55','{\it\fontname{Bodoni MT}C1-C2_{p}}=65','{\it\fontname{Bodoni MT}C1-C2_{p}}=75'},'location','northeast');
 title('(a)','FontWeight','bold','position',[0 0 -0.2]);
-%¼ÓÉÏ±ê×¢ºÍ¼ýÍ·
 text(0.4 ,0.2 ,0.3,'$ESS$','interpreter','latex');
 annotation('arrow',[0.55 0.35],[0.35 0.32]);
 annotation('arrow',[0.58 0.58],[0.38 0.45]);
 % the small figure
-axes('position',[0.13 0.32 0.2 0.2]); %Ð¡Í¼µÄ¹Ø¼üÓï¾äÈ·¶¨Ð¡Í¼µÄ´óÐ¡Î»ÖÃ
-% z-xÐ¡Í¼ÖÐµÄÏßÌõ
-%Ð¡Í¼ÖÐµÄÏßÌõ
+axes('position',[0.13 0.32 0.2 0.2]); 
 C1=15, C2=100, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.5 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'ro:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'r+','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'r+','linewidth',1);
 hold on 
 C1=15, C2=150, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.5 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'bd:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);
 hold on
 C1=15, C2=200, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.5 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'gs:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);
 hold on
-%×ø±ê¿Ì¶È¼ä¸ô¼°Çø¼ä£¬µ«²»ÏÔÊ¾
+
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
 axis([0 1 0 1 0 1])
 set(gca,'XTickLabel','','YTickLabel','','ZTickLabel','')
-%±³¾°Íø¸ñ²¢ÉèÖÃ°×µ×
+
 grid on
 hold on  
 set(0,'defaultfigurecolor','w')
-%Í¼ÏóÏÔÊ¾ÊÓ½Ç£¬ÒÔ¼°ÏàÓ¦µÄ×ø±ê±ê×¢
-view([0 0]); %z-xÐ¡Í¼
+
+view([0 0]);
 xlabel('x','position',[0.8 1 0.3])
 zlabel('z','position',[0.1 1 0.8],'Rotation',360)
 
-%% Í¼ ·ÀÓù·½²ÎÊýÓ°Ïì x=0.9
 clc,clear;
 figure(1);    
 C1=15, C2=100, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 50],[0.9 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'ro:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'ro','linewidth',1); %ÈýÎ¬»ð²ñ¹÷Í¼
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
+%stem3(y(:,1),y(:,2),y(:,3),'ro','linewidth',1);   
+   
+   
+   
 hold on ;
 C1=15, C2=150, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 50],[0.9 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'bd:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'b-','linewidth',1);%ÈýÎ¬»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'b-','linewidth',1);  
 hold on ;  
 C1=15, C2=200, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.9 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'gs:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%ÈýÎ¬»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);  
 hold on  ; 
-%×ø±ê¿Ì¶È¼ä¸ô¼°ÆäÇø¼ä£¬×ø±ê±ê×¢
+   
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
 axis([0 1 0 1 0 1])
 xlabel('$x$','interpreter','latex');ylabel('$y$','interpreter','latex');zlabel('$z$','interpreter','latex','Rotation',360,'position',[-0.1 1 1.1]);
-%Í¼ÏóÍø¸ñ£¬µ×Í¼¼Ó°×
+   
 grid on
 hold on
 set(0,'defaultfigurecolor','w')
-%Í¼Àý¼°±êÌâ
+   
 legend({'{\it\fontname{Bodoni MT}C1-C2_{p}}=55','{\it\fontname{Bodoni MT}C1-C2_{p}}=65','{\it\fontname{Bodoni MT}C1-C2_{p}}=75'},'location','northeast');
 title('(a)','FontWeight','bold','position',[0 0 -0.2]);
-%¼ÓÉÏ±ê×¢ºÍ¼ýÍ·
+   
 text(0.4 ,0.2 ,0.3,'$ESS$','interpreter','latex');
 annotation('arrow',[0.55 0.35],[0.35 0.32]);
 annotation('arrow',[0.58 0.58],[0.38 0.45]);
 % the small figure
-axes('position',[0.13 0.32 0.2 0.2]); %Ð¡Í¼µÄ¹Ø¼üÓï¾äÈ·¶¨Ð¡Í¼µÄ´óÐ¡Î»ÖÃ
-% z-xÐ¡Í¼ÖÐµÄÏßÌõ
-%Ð¡Í¼ÖÐµÄÏßÌõ
+axes('position',[0.13 0.32 0.2 0.2]);    
+   
+   
 C1=15, C2=100, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.9 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'ro:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'r+','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'r+','linewidth',1);   
 hold on 
 C1=15, C2=150, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.9 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'bd:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);   
 hold on
 C1=15, C2=200, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.9 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'gs:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);   
 hold on
-%×ø±ê¿Ì¶È¼ä¸ô¼°Çø¼ä£¬µ«²»ÏÔÊ¾
+   
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
 axis([0 1 0 1 0 1])
 set(gca,'XTickLabel','','YTickLabel','','ZTickLabel','')
-%±³¾°Íø¸ñ²¢ÉèÖÃ°×µ×
+   
 grid on
 hold on  
 set(0,'defaultfigurecolor','w')
-%Í¼ÏóÏÔÊ¾ÊÓ½Ç£¬ÒÔ¼°ÏàÓ¦µÄ×ø±ê±ê×¢
-view([0 0]); %z-xÐ¡Í¼
+
+view([0 0]);    
 xlabel('x','position',[0.8 1 0.3])
 zlabel('z','position',[0.1 1 0.8],'Rotation',360)
 
-%% Í¼ Íø°²ÏÕ²ÎÊýÓ°Ïì x=0.1
+   
 clc,clear;
 figure(1);    
 C1=10, C2=70, C3=105, C4=100, V=150, a=0.3, b=0.9, Fa=10, Rd=50, Rg=80, L=90, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 50],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'ro:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'ro','linewidth',1); %ÈýÎ¬»ð²ñ¹÷Í¼
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
+%stem3(y(:,1),y(:,2),y(:,3),'ro','linewidth',1);   
+   
+   
+   
 hold on ;
 C1=10, C2=70, C3=105, C4=100, V=150, a=0.3, b=0.9, Fa=20, Rd=50, Rg=80, L=90, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 50],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'bd:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'b-','linewidth',1);%ÈýÎ¬»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'b-','linewidth',1);  
 hold on ;  
 C1=10, C2=70, C3=105, C4=100, V=150, a=0.3, b=0.9, Fa=30, Rd=50, Rg=80, L=90, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'gs:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%ÈýÎ¬»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);  
 hold on  ; 
-%×ø±ê¿Ì¶È¼ä¸ô¼°ÆäÇø¼ä£¬×ø±ê±ê×¢
+   
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
 axis([0 1 0 1 0 1])
 xlabel('$y$','interpreter','latex');ylabel('$z$','interpreter','latex');zlabel('$w$','interpreter','latex','Rotation',360,'position',[-0.1 1 1.1]);
-%Í¼ÏóÍø¸ñ£¬µ×Í¼¼Ó°×
+   
 grid on
 hold on
 set(0,'defaultfigurecolor','w')
-%Í¼Àý¼°±êÌâ
+   
 legend({'{\it\fontname{Bodoni MT}F_{a}}=30','{\it\fontname{Bodoni MT}F_{a}}=60','{\it\fontname{Bodoni MT}F_{a}}=90'},'location','northeast');
 title('(a)','FontWeight','bold','position',[0 0 -0.2]);
-%¼ÓÉÏ±ê×¢ºÍ¼ýÍ·
+   
 text(0.4 ,0.2 ,0.3,'$ESS$','interpreter','latex');
 annotation('arrow',[0.55 0.35],[0.35 0.32]);
 annotation('arrow',[0.58 0.58],[0.38 0.45]);
 % the small figure
-axes('position',[0.13 0.32 0.2 0.2]); %Ð¡Í¼µÄ¹Ø¼üÓï¾äÈ·¶¨Ð¡Í¼µÄ´óÐ¡Î»ÖÃ
-% z-xÐ¡Í¼ÖÐµÄÏßÌõ
-%Ð¡Í¼ÖÐµÄÏßÌõ
+axes('position',[0.13 0.32 0.2 0.2]);    
+   
+   
 C1=15, C2=100, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'ro:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'r+','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'r+','linewidth',1);   
 hold on 
 C1=15, C2=150, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'bd:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);   
 hold on
 C1=15, C2=200, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'gs:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);   
 hold on
-%×ø±ê¿Ì¶È¼ä¸ô¼°Çø¼ä£¬µ«²»ÏÔÊ¾
+   
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
 axis([0 1 0 1 0 1])
 set(gca,'XTickLabel','','YTickLabel','','ZTickLabel','')
-%±³¾°Íø¸ñ²¢ÉèÖÃ°×µ×
+   
 grid on
 hold on  
 set(0,'defaultfigurecolor','w')
-%Í¼ÏóÏÔÊ¾ÊÓ½Ç£¬ÒÔ¼°ÏàÓ¦µÄ×ø±ê±ê×¢
-view([0 0]); %z-xÐ¡Í¼
+ 
+view([0 0]);    
 xlabel('x','position',[0.8 1 0.3])
 zlabel('z','position',[0.1 1 0.8],'Rotation',360)
 
-%% Í¼ Íø°²ÏÕ²ÎÊýÓ°Ïì x=0.5
 clc,clear;
 figure(1);    
 C1=10, C2=70, C3=105, C4=100, V=150, a=0.3, b=0.9, Fa=10, Rd=50, Rg=80, L=90, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 50],[0.5 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'ro:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'ro','linewidth',1); %ÈýÎ¬»ð²ñ¹÷Í¼
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
+%stem3(y(:,1),y(:,2),y(:,3),'ro','linewidth',1);   
+   
+   
+   
 hold on ;
 C1=10, C2=70, C3=105, C4=100, V=150, a=0.3, b=0.9, Fa=20, Rd=50, Rg=80, L=90, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 50],[0.5 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'bd:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'b-','linewidth',1);%ÈýÎ¬»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'b-','linewidth',1);  
 hold on ;  
 C1=10, C2=70, C3=105, C4=100, V=150, a=0.3, b=0.9, Fa=30, Rd=50, Rg=80, L=90, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.5 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'gs:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%ÈýÎ¬»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);  
 hold on  ; 
-%×ø±ê¿Ì¶È¼ä¸ô¼°ÆäÇø¼ä£¬×ø±ê±ê×¢
+   
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
 axis([0 1 0 1 0 1])
 xlabel('$y$','interpreter','latex');ylabel('$z$','interpreter','latex');zlabel('$w$','interpreter','latex','Rotation',360,'position',[-0.1 1 1.1]);
-%Í¼ÏóÍø¸ñ£¬µ×Í¼¼Ó°×
+   
 grid on
 hold on
 set(0,'defaultfigurecolor','w')
-%Í¼Àý¼°±êÌâ
+   
 legend({'{\it\fontname{Bodoni MT}F_{a}}=30','{\it\fontname{Bodoni MT}F_{a}}=60','{\it\fontname{Bodoni MT}F_{a}}=90'},'location','northeast');
 title('(a)','FontWeight','bold','position',[0 0 -0.2]);
-%¼ÓÉÏ±ê×¢ºÍ¼ýÍ·
+   
 text(0.4 ,0.2 ,0.3,'$ESS$','interpreter','latex');
 annotation('arrow',[0.55 0.35],[0.35 0.32]);
 annotation('arrow',[0.58 0.58],[0.38 0.45]);
 % the small figure
-axes('position',[0.13 0.32 0.2 0.2]); %Ð¡Í¼µÄ¹Ø¼üÓï¾äÈ·¶¨Ð¡Í¼µÄ´óÐ¡Î»ÖÃ
-% z-xÐ¡Í¼ÖÐµÄÏßÌõ
-%Ð¡Í¼ÖÐµÄÏßÌõ
+axes('position',[0.13 0.32 0.2 0.2]);    
+   
+   
 C1=15, C2=100, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'ro:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'r+','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'r+','linewidth',1);   
 hold on 
 C1=15, C2=150, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'bd:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);   
 hold on
 C1=15, C2=200, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'gs:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);   
 hold on
-%×ø±ê¿Ì¶È¼ä¸ô¼°Çø¼ä£¬µ«²»ÏÔÊ¾
+   
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
 axis([0 1 0 1 0 1])
 set(gca,'XTickLabel','','YTickLabel','','ZTickLabel','')
-%±³¾°Íø¸ñ²¢ÉèÖÃ°×µ×
+   
 grid on
 hold on  
 set(0,'defaultfigurecolor','w')
-%Í¼ÏóÏÔÊ¾ÊÓ½Ç£¬ÒÔ¼°ÏàÓ¦µÄ×ø±ê±ê×¢
-view([0 0]); %z-xÐ¡Í¼
+ 
+view([0 0]);    
 xlabel('x','position',[0.8 1 0.3])
 zlabel('z','position',[0.1 1 0.8],'Rotation',360)
-
-%% Í¼ Íø°²ÏÕ²ÎÊýÓ°Ïì x=0.9
 clc,clear;
 figure(1);    
 C1=10, C2=70, C3=105, C4=100, V=150, a=0.3, b=0.9, Fa=10, Rd=50, Rg=80, L=90, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 50],[0.9 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'ro:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'ro','linewidth',1); %ÈýÎ¬»ð²ñ¹÷Í¼
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
+%stem3(y(:,1),y(:,2),y(:,3),'ro','linewidth',1);   
+   
+   
+   
 hold on ;
 C1=10, C2=70, C3=105, C4=100, V=150, a=0.3, b=0.9, Fa=20, Rd=50, Rg=80, L=90, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 50],[0.9 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'bd:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'b-','linewidth',1);%ÈýÎ¬»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'b-','linewidth',1);  
 hold on ;  
 C1=10, C2=70, C3=105, C4=100, V=150, a=0.3, b=0.9, Fa=30, Rd=50, Rg=80, L=90, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.9 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'gs:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%ÈýÎ¬»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);  
 hold on  ; 
 %C1=10, C2=70, C3=105, C4=100, V=150, a=0.3, b=0.9, Fa=35, Rd=50, Rg=80, L=90, Fi=50, T=40;
 %[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.9 0.7 0.7 0.7]);
 %plot3(y(:,2),y(:,3),y(:,4),'cp:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%ÈýÎ¬»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);  
 %hold on  ;
-%×ø±ê¿Ì¶È¼ä¸ô¼°ÆäÇø¼ä£¬×ø±ê±ê×¢
+   
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
 axis([0 1 0 1 0 1])
 xlabel('$y$','interpreter','latex');ylabel('$z$','interpreter','latex');zlabel('$w$','interpreter','latex','Rotation',360,'position',[-0.1 1 1.1]);
-%Í¼ÏóÍø¸ñ£¬µ×Í¼¼Ó°×
+   
 grid on
 hold on
 set(0,'defaultfigurecolor','w')
-%Í¼Àý¼°±êÌâ
+   
 legend({'{\it\fontname{Bodoni MT}F_{a}}=30','{\it\fontname{Bodoni MT}F_{a}}=60','{\it\fontname{Bodoni MT}F_{a}}=90'},'location','northeast');
 title('(a)','FontWeight','bold','position',[0 0 -0.2]);
-%¼ÓÉÏ±ê×¢ºÍ¼ýÍ·
+   
 text(0.4 ,0.2 ,0.3,'$ESS$','interpreter','latex');
 annotation('arrow',[0.55 0.35],[0.35 0.32]);
 annotation('arrow',[0.58 0.58],[0.38 0.45]);
 % the small figure
-axes('position',[0.13 0.32 0.2 0.2]); %Ð¡Í¼µÄ¹Ø¼üÓï¾äÈ·¶¨Ð¡Í¼µÄ´óÐ¡Î»ÖÃ
-% z-xÐ¡Í¼ÖÐµÄÏßÌõ
-%Ð¡Í¼ÖÐµÄÏßÌõ
+axes('position',[0.13 0.32 0.2 0.2]);    
+   
+   
 C1=15, C2=100, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'ro:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'r+','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'r+','linewidth',1);   
 hold on 
 C1=15, C2=150, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'bd:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);   
 hold on
 C1=15, C2=200, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'gs:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);   
 hold on
-%×ø±ê¿Ì¶È¼ä¸ô¼°Çø¼ä£¬µ«²»ÏÔÊ¾
+   
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
 axis([0 1 0 1 0 1])
 set(gca,'XTickLabel','','YTickLabel','','ZTickLabel','')
-%±³¾°Íø¸ñ²¢ÉèÖÃ°×µ×
+   
 grid on
 hold on  
 set(0,'defaultfigurecolor','w')
-%Í¼ÏóÏÔÊ¾ÊÓ½Ç£¬ÒÔ¼°ÏàÓ¦µÄ×ø±ê±ê×¢
-view([0 0]); %z-xÐ¡Í¼
+ 
+view([0 0]);    
 xlabel('x','position',[0.8 1 0.3])
 zlabel('z','position',[0.1 1 0.8],'Rotation',360)
 
-%% Í¼ Õþ¸®¼à¹Ü²¿ÃÅ²ÎÊýÓ°Ïì x=0.1
 clc,clear;
 figure(1);    
 C1=35, C2=20, C3=100, C4=40, V=60, a=0.5, b=0.6, Fa=30, Rd=15, Rg=50, L=20, Fi=5,T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 50],[0.1 0.8 0.8 0.2]);
 plot3(y(:,2),y(:,3),y(:,4),'ro:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'ro','linewidth',1); %ÈýÎ¬»ð²ñ¹÷Í¼
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
+%stem3(y(:,1),y(:,2),y(:,3),'ro','linewidth',1);   
+   
+   
+   
 hold on ;
 C1=35, C2=20, C3=100, C4=40, V=60, a=0.5, b=0.6, Fa=30, Rd=15, Rg=50, L=20, Fi=15,T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 50],[0.1 0.8 0.8 0.2]);
 plot3(y(:,2),y(:,3),y(:,4),'bd:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'b-','linewidth',1);%ÈýÎ¬»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'b-','linewidth',1);  
 hold on ;  
 C1=35, C2=20, C3=100, C4=40, V=60, a=0.5, b=0.6, Fa=30, Rd=15, Rg=50, L=20, Fi=25,T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.1 0.8 0.8 0.2]);
 plot3(y(:,2),y(:,3),y(:,4),'gs:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%ÈýÎ¬»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);  
 hold on  ; 
-%×ø±ê¿Ì¶È¼ä¸ô¼°ÆäÇø¼ä£¬×ø±ê±ê×¢
+   
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
 axis([0 1 0 1 0 1])
 xlabel('$y$','interpreter','latex');ylabel('$z$','interpreter','latex');zlabel('$w$','interpreter','latex','Rotation',360,'position',[-0.1 1 1.1]);
-%Í¼ÏóÍø¸ñ£¬µ×Í¼¼Ó°×
+   
 grid on
 hold on
 set(0,'defaultfigurecolor','w')
-%Í¼Àý¼°±êÌâ
+   
 legend({'{\it\fontname{Bodoni MT}F_{i}}=40','{\it\fontname{Bodoni MT}F_{i}}=60','{\it\fontname{Bodoni MT}F_{i}}=80'},'location','northeast');
 title('(a)','FontWeight','bold','position',[0 0 -0.2]);
-%¼ÓÉÏ±ê×¢ºÍ¼ýÍ·
+   
 text(0.4 ,0.2 ,0.3,'$ESS$','interpreter','latex');
 annotation('arrow',[0.55 0.35],[0.35 0.32]);
 annotation('arrow',[0.58 0.58],[0.38 0.45]);
 % the small figure
-axes('position',[0.13 0.32 0.2 0.2]); %Ð¡Í¼µÄ¹Ø¼üÓï¾äÈ·¶¨Ð¡Í¼µÄ´óÐ¡Î»ÖÃ
-% z-xÐ¡Í¼ÖÐµÄÏßÌõ
-%Ð¡Í¼ÖÐµÄÏßÌõ
+axes('position',[0.13 0.32 0.2 0.2]);    
+   
+   
 C1=15, C2=100, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'ro:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'r+','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'r+','linewidth',1);   
 hold on 
 C1=15, C2=150, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'bd:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);   
 hold on
 C1=15, C2=200, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'gs:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);   
 hold on
-%×ø±ê¿Ì¶È¼ä¸ô¼°Çø¼ä£¬µ«²»ÏÔÊ¾
+   
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
 axis([0 1 0 1 0 1])
 set(gca,'XTickLabel','','YTickLabel','','ZTickLabel','')
-%±³¾°Íø¸ñ²¢ÉèÖÃ°×µ×
+   
 grid on
 hold on  
 set(0,'defaultfigurecolor','w')
-%Í¼ÏóÏÔÊ¾ÊÓ½Ç£¬ÒÔ¼°ÏàÓ¦µÄ×ø±ê±ê×¢
-view([0 0]); %z-xÐ¡Í¼
+ 
+view([0 0]);    
 xlabel('x','position',[0.8 1 0.3])
 zlabel('z','position',[0.1 1 0.8],'Rotation',360)
-
-%% Í¼ Õþ¸®¼à¹Ü²¿ÃÅ²ÎÊýÓ°Ïì x=0.5
 
 clc,clear;
 figure(1);    
 C1=35, C2=20, C3=100, C4=40, V=60, a=0.5, b=0.6, Fa=30, Rd=15, Rg=50, L=20, Fi=5,T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 50],[0.5 0.8 0.8 0.2]);
 plot3(y(:,2),y(:,3),y(:,4),'ro:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'ro','linewidth',1); %ÈýÎ¬»ð²ñ¹÷Í¼
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
+%stem3(y(:,1),y(:,2),y(:,3),'ro','linewidth',1);   
+   
+   
+   
 hold on ;
 C1=35, C2=20, C3=100, C4=40, V=60, a=0.5, b=0.6, Fa=30, Rd=15, Rg=50, L=20, Fi=20,T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 50],[0.5 0.8 0.8 0.2]);
 plot3(y(:,2),y(:,3),y(:,4),'bd:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'b-','linewidth',1);%ÈýÎ¬»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'b-','linewidth',1);  
 hold on ;  
 C1=35, C2=20, C3=100, C4=40, V=60, a=0.5, b=0.6, Fa=30, Rd=15, Rg=50, L=20, Fi=30,T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.5 0.8 0.8 0.2]);
 plot3(y(:,2),y(:,3),y(:,4),'gs:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%ÈýÎ¬»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);  
 hold on  ; 
-%×ø±ê¿Ì¶È¼ä¸ô¼°ÆäÇø¼ä£¬×ø±ê±ê×¢
+   
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
 axis([0 1 0 1 0 1])
 xlabel('$y$','interpreter','latex');ylabel('$z$','interpreter','latex');zlabel('$w$','interpreter','latex','Rotation',360,'position',[-0.1 1 1.1]);
-%Í¼ÏóÍø¸ñ£¬µ×Í¼¼Ó°×
+   
 grid on
 hold on
 set(0,'defaultfigurecolor','w')
-%Í¼Àý¼°±êÌâ
+   
 legend({'{\it\fontname{Bodoni MT}F_{i}}=40','{\it\fontname{Bodoni MT}F_{i}}=60','{\it\fontname{Bodoni MT}F_{i}}=80'},'location','northeast');
 title('(a)','FontWeight','bold','position',[0 0 -0.2]);
-%¼ÓÉÏ±ê×¢ºÍ¼ýÍ·
+   
 text(0.4 ,0.2 ,0.3,'$ESS$','interpreter','latex');
 annotation('arrow',[0.55 0.35],[0.35 0.32]);
 annotation('arrow',[0.58 0.58],[0.38 0.45]);
 % the small figure
-axes('position',[0.13 0.32 0.2 0.2]); %Ð¡Í¼µÄ¹Ø¼üÓï¾äÈ·¶¨Ð¡Í¼µÄ´óÐ¡Î»ÖÃ
-% z-xÐ¡Í¼ÖÐµÄÏßÌõ
-%Ð¡Í¼ÖÐµÄÏßÌõ
+axes('position',[0.13 0.32 0.2 0.2]);    
+   
+   
 C1=15, C2=100, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'ro:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'r+','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'r+','linewidth',1);   
 hold on 
 C1=15, C2=150, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'bd:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);   
 hold on
 C1=15, C2=200, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'gs:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);   
 hold on
-%×ø±ê¿Ì¶È¼ä¸ô¼°Çø¼ä£¬µ«²»ÏÔÊ¾
+   
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
 axis([0 1 0 1 0 1])
 set(gca,'XTickLabel','','YTickLabel','','ZTickLabel','')
-%±³¾°Íø¸ñ²¢ÉèÖÃ°×µ×
+   
 grid on
 hold on  
 set(0,'defaultfigurecolor','w')
-%Í¼ÏóÏÔÊ¾ÊÓ½Ç£¬ÒÔ¼°ÏàÓ¦µÄ×ø±ê±ê×¢
-view([0 0]); %z-xÐ¡Í¼
+ 
+view([0 0]);    
 xlabel('x','position',[0.8 1 0.3])
 zlabel('z','position',[0.1 1 0.8],'Rotation',360)
 
-%% Í¼ Õþ¸®¼à¹Ü²¿ÃÅ²ÎÊýÓ°Ïì x=0.9
 clc,clear;
 figure(1);    
 C1=35, C2=20, C3=100, C4=40, V=60, a=0.5, b=0.6, Fa=30, Rd=15, Rg=50, L=20, Fi=5,T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 50],[0.9 0.8 0.8 0.2]);
 plot3(y(:,2),y(:,3),y(:,4),'ro:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'ro','linewidth',1); %ÈýÎ¬»ð²ñ¹÷Í¼
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
+%stem3(y(:,1),y(:,2),y(:,3),'ro','linewidth',1);   
+   
+   
+   
 hold on ;
 C1=35, C2=20, C3=100, C4=40, V=60, a=0.5, b=0.6, Fa=30, Rd=15, Rg=50, L=20, Fi=15,T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 50],[0.9 0.8 0.8 0.2]);
 plot3(y(:,2),y(:,3),y(:,4),'bd:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'b-','linewidth',1);%ÈýÎ¬»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'b-','linewidth',1);  
 hold on ;  
 C1=35, C2=20, C3=100, C4=40, V=60, a=0.5, b=0.6, Fa=30, Rd=15, Rg=50, L=20, Fi=35,T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.9 0.8 0.8 0.2]);
 plot3(y(:,2),y(:,3),y(:,4),'gs:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%ÈýÎ¬»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);  
 hold on  ; 
-%×ø±ê¿Ì¶È¼ä¸ô¼°ÆäÇø¼ä£¬×ø±ê±ê×¢
+   
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
 axis([0 1 0 1 0 1])
 xlabel('$y$','interpreter','latex');ylabel('$z$','interpreter','latex');zlabel('$w$','interpreter','latex','Rotation',360,'position',[-0.1 1 1.1]);
-%Í¼ÏóÍø¸ñ£¬µ×Í¼¼Ó°×
+   
 grid on
 hold on
 set(0,'defaultfigurecolor','w')
-%Í¼Àý¼°±êÌâ
+   
 legend({'{\it\fontname{Bodoni MT}F_{i}}=40','{\it\fontname{Bodoni MT}F_{i}}=60','{\it\fontname{Bodoni MT}F_{i}}=80'},'location','northeast');
 title('(a)','FontWeight','bold','position',[0 0 -0.2]);
-%¼ÓÉÏ±ê×¢ºÍ¼ýÍ·
+   
 text(0.4 ,0.2 ,0.3,'$ESS$','interpreter','latex');
 annotation('arrow',[0.55 0.35],[0.35 0.32]);
 annotation('arrow',[0.58 0.58],[0.38 0.45]);
 % the small figure
-axes('position',[0.13 0.32 0.2 0.2]); %Ð¡Í¼µÄ¹Ø¼üÓï¾äÈ·¶¨Ð¡Í¼µÄ´óÐ¡Î»ÖÃ
-% z-xÐ¡Í¼ÖÐµÄÏßÌõ
-%Ð¡Í¼ÖÐµÄÏßÌõ
+axes('position',[0.13 0.32 0.2 0.2]);    
+   
+   
 C1=15, C2=100, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'ro:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'r+','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'r+','linewidth',1);   
 hold on 
 C1=15, C2=150, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'bd:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);   
 hold on
 C1=15, C2=200, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 10],[0.1 0.7 0.7 0.7]);
 plot3(y(:,2),y(:,3),y(:,4),'gs:','linewidth',1);
-%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);%»ð²ñ¹÷Í¼
+%stem3(y(:,1),y(:,2),y(:,3),'g--','linewidth',1);   
 hold on
-%×ø±ê¿Ì¶È¼ä¸ô¼°Çø¼ä£¬µ«²»ÏÔÊ¾
+   
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
 axis([0 1 0 1 0 1])
 set(gca,'XTickLabel','','YTickLabel','','ZTickLabel','')
-%±³¾°Íø¸ñ²¢ÉèÖÃ°×µ×
+   
 grid on
 hold on  
 set(0,'defaultfigurecolor','w')
-%Í¼ÏóÏÔÊ¾ÊÓ½Ç£¬ÒÔ¼°ÏàÓ¦µÄ×ø±ê±ê×¢
-view([0 0]); %z-xÐ¡Í¼
+ 
+view([0 0]);    
 xlabel('x','position',[0.8 1 0.3])
 zlabel('z','position',[0.1 1 0.8],'Rotation',360)
 
-%% Õþ¸®¼à¹Ü»úÖÆµÄÓ°Ïì
 % g=0.9
 clc;clear; 
 C1=10, C2=30, C3=105, C4=100, V=200, a=0.3, b=0.9, Fa=30, Rd=20, Rg=80, L=90, Fi=50, T=40;  
@@ -945,7 +870,7 @@ for i=0.1:0.2:1
             for l=0.9
             [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 50],[i j k l]);
             grid on
-            %¸ãÇå³þÄã»­µÄÊÇÄÄÈýÎ¬µÄ¹ØÏµ
+               
             plot3(y(:,1),y(:,2),y(:,3),'linewidth',1);
             set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
             set(gca,'XTickLabel',num2str(get(gca,'XTick')','%.1f'));
@@ -973,7 +898,7 @@ for i=0.1:0.2:1
             for l=0
             [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 50],[i j k l]);
             grid on
-            %¸ãÇå³þÄã»­µÄÊÇÄÄÈýÎ¬µÄ¹ØÏµ
+               
             plot3(y(:,1),y(:,2),y(:,3),'linewidth',1);
             set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
             set(gca,'XTickLabel',num2str(get(gca,'XTick')','%.1f'));
@@ -990,8 +915,6 @@ ylabel('$y$','interpreter','latex');
 zlabel('$z$','interpreter','latex','Rotation',360);
 title('g=0','interpreter','latex');
 
-%% ²»Í¬³õÊ¼²ßÂÔ×éºÏÑÝ»¯Í¼ Í¼1-Í¼4
-%Í¼1£¬Êý×é1
 clc,clear; 
 figure(11);
 C1=15,C2=80,C3=120,C4=100,V=150,a=0.2,b=0.8,Fa=60,Rd=50,L=50,Fi=50,T=40;  
@@ -1001,7 +924,7 @@ for i=0.1:0.2:1
             for l=0
         [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 50],[i j k l]);               
         plot3(y(:,1),y(:,2),y(:,3),'linewidth',1);
-        %plot3(y(:,1),y(:,2),y(:,3),'rp','linewidth',1); %°ÑÑÕÉ«¸ÄÎªºìÉ«£¬ÏßÐÍ¸ÄÎªÎå½ÇÐÇ¡£
+        %plot3(y(:,1),y(:,2),y(:,3),'rp','linewidth',1); 
         set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1],'ZTick',[0:0.2:1])
         hold on
         axis([0 1 0 1 0 1])
@@ -1014,11 +937,10 @@ hold on
 xlabel('x','Rotation',0);
 ylabel('y','Rotation',0);
 zlabel('z','Rotation',360,'position',[0 0 1.05]);
-title('Í¼  11 Êý×é1ÑÝ»¯50´Î½á¹û','FontWeight','bold','position',[1 0 -0.13]);
+title('å›¾  11 æ•°ç»„1æ¼”åŒ–50æ¬¡ç»“æžœ','FontWeight','bold','position',[1 0 -0.13]);
 
 
 figure(1)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%×ÓÍ¼1
 clc;clear;
 C1=15,C2=80,C3=120,C4=100,V=150,a=0.2,b=0.8,Fa=60,Rd=50,L=50,Fi=50,T=40;
 %subplot(3,1,1)
@@ -1026,7 +948,6 @@ set(0,'defaultfigurecolor','w')
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0,200],[0.4,0.3,0.2,0.3]);
 points=1:1:length(t);
 plot(t,y(:,1),'r^-','linewidth',1,'markersize',3,'markerfacecolor','r','markerindices',points);
-% hold on·ÅÔÚº¯Êýode45Ç°ÃæµÄ»°£¬Éú³ÉµÄÍ¼Ïñ²»ÊÇ·â±ÕµÄ·½¿ò£¬¶øÊÇ×ø±êÏµµÄµÚÒ»ÏóÏÞ
 hold on
 plot(t,y(:,2),'b-','linewidth',1);
 hold on
@@ -1038,24 +959,22 @@ set(gca,'XTick',[0:50:200],'YTick',[0.0:0.2:1.0])
 set(gca,'YTickLabel',num2str(get(gca,'YTick')','%.1f'));
 axis([0 200 -0.05 1.05])
 xlabel('$t$','interpreter','latex');
-ylabel('¸ÅÂÊ');
+ylabel('probablity');
 zhuti=title('$C_{gh}=12$');
 set(zhuti,'interpreter','latex')
-legend('Ò½Ò©ÑÐ¾¿»ú¹¹({\it\fontname{Bodoni MT}r})','Ã½ÌåÆ½Ì¨({\it\fontname{Bodoni MT}m})','Õþ¸®¼à¹Ü²¿ÃÅ({\it\fontname{Bodoni MT}g})','ÈºÖÚ({\it\fontname{Bodoni MT}p})');
+legend('({\it\fontname{Bodoni MT}r})','({\it\fontname{Bodoni MT}m})','({\it\fontname{Bodoni MT}g})','({\it\fontname{Bodoni MT}p})');
 
-%% Ò»ÖÖÊÇ¸Ä±äx,y,zµÄ³õÊ¼Öµ£¬³õÊ¼Öµ³£¼ûÈ¡ÖµÎª0.5,0.2,0.1,0.9£¬ÕâÀïÎÒÃÇÒÔ0.2,0.5,0.7ÎªÀý
-%%Ìõ¼þ1£ºÆ½Ãæx-t
+
 clc,clear;
 figure(1);
-%ÏßÌõ
 C1=15,C2=80,C3=120,C4=100,V=150,a=0.2,b=0.8,Fa=60,Rd=50,L=50,Fi=50,T=40;     
-[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]); %Ò»°ãx±ä»¯£¬yºÍzÒªÃ´Ò»Æð¸ú×Å±ä»¯£¬ÒªÃ´Ò»Ö±±£³ÖÎª0.5
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]); 
+points=1:1:length(t); 
 plot(t,y(:,1),'rh:','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
-%stem(t,y(:,1),'rh-','linewidth',1,'markersize',5,'markerfacecolor','r'); %Æ½Ãæ»ð²ñ¹÷Í¼
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
+%stem(t,y(:,1),'rh-','linewidth',1,'markersize',5,'markerfacecolor','r'); 
+   
+   
+   
 hold on;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.5 0.5 0.5 0.5]);
 points=1:1:length(t);
@@ -1069,29 +988,24 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,1),'mp:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
 legend('x=0.2','x=0.5','x=0.7','x=0.9');
-title('{\it\fontname{Bodoni MT}x}²»Í¬Ê±µÄÑÝ»¯·ÂÕæÍ¼','position',[0.5 -0.15]','FontWeight','bold');
-%% Ìõ¼þ1£º2y-t,ÕâÀïÎÒÃÇÒÔ0.2,0.5,0.7ÎªÀý
+title('{\it\fontname{Bodoni MT}x}','position',[0.5 -0.15]','FontWeight','bold');
 clc,clear;
 figure(2);
-%ÏßÌõ
 C1=15,C2=95,C3=120,C4=100,V=150,a=0.2,b=0.8,E1=200,E2=100,Fa=60,Rd=50,Rg=80,L=50,Fi=50,T=40;    
-[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]); %Ò»°ãy±ä»¯£¬xºÍzÒªÃ´Ò»Æð¸ú×Å±ä»¯£¬ÒªÃ´Ò»Ö±±£³ÖÎª0.5
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]);
+points=1:1:length(t); 
 plot(t,y(:,2),'rh:','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
+   
+   
+   
 hold on;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.5 0.5 0.5 0.5]);
 points=1:1:length(t);
@@ -1105,29 +1019,25 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,2),'mp:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
 legend('y=0.2','y=0.5','y=0.7','y=0.9');
-title('{\it\fontname{Bodoni MT}y}²»Í¬Ê±µÄÑÝ»¯·ÂÕæÍ¼','position',[0.5 -0.15]','FontWeight','bold');
-%% Ìõ¼þ1£º3z-t,ÕâÀïÎÒÃÇÒÔ0.2,0.5,0.7ÎªÀý
+title('{\it\fontname{Bodoni MT}y}','position',[0.5 -0.15]','FontWeight','bold');
+
 clc,clear;
 figure(3);
-%ÏßÌõ
 C1=15,C2=95,C3=120,C4=100,V=150,a=0.2,b=0.8,E1=200,E2=100,Fa=60,Rd=50,Rg=80,L=50,Fi=50,T=40;     
-[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]); %Ò»°ãz±ä»¯£¬xºÍyÒªÃ´Ò»Æð¸ú×Å±ä»¯£¬ÒªÃ´Ò»Ö±±£³ÖÎª0.5
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]);    
+points=1:1:length(t);    
 plot(t,y(:,3),'rh:','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
+   
+   
+   
 hold on;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.5 0.5 0.5 0.5]);
 points=1:1:length(t);
@@ -1141,29 +1051,29 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,3),'mp:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
+   
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
+   
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
+   
 legend('z=0.2','z=0.5','z=0.7','z=0.9');
-title('{\it\fontname{Bodoni MT}z}²»Í¬Ê±µÄÑÝ»¯·ÂÕæÍ¼','position',[0.5 -0.15]','FontWeight','bold');
-%% Ìõ¼þ1£º4w-t,ÕâÀïÎÒÃÇÒÔ0.2,0.5,0.7,0.9ÎªÀý
+title('{\it\fontname{Bodoni MT}z}   ','position',[0.5 -0.15]','FontWeight','bold');
+   
 clc,clear;
 figure(4);
-%ÏßÌõ
+   
 C1=15,C2=95,C3=120,C4=100,V=150,a=0.2,b=0.8,E1=200,E2=100,Fa=60,Rd=50,Rg=80,L=50,Fi=50,T=40;     
-[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]); %Ò»°ãz±ä»¯£¬xºÍyÒªÃ´Ò»Æð¸ú×Å±ä»¯£¬ÒªÃ´Ò»Ö±±£³ÖÎª0.5
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]);    
+points=1:1:length(t);    
 plot(t,y(:,4),'rh:','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
+   
+   
+   
 hold on;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.5 0.5 0.5 0.5]);
 points=1:1:length(t);
@@ -1177,31 +1087,31 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,4),'mp:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
+   
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
+   
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
+   
 legend('w=0.2','w=0.5','w=0.7','w=0.9');
-title('{\it\fontname{Bodoni MT}w}²»Í¬Ê±µÄÑÝ»¯·ÂÕæÍ¼','position',[0.5 -0.15]','FontWeight','bold');
+title('{\it\fontname{Bodoni MT}w}   ','position',[0.5 -0.15]','FontWeight','bold');
 %% 
-%%Ìõ¼þ2£ºÆ½Ãæx-t
+%%
 clc,clear;
 figure(1);
-%ÏßÌõ
+   
 C1=20, C2=75, C3=120, C4=100, V=150,a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=50, Fi=50, T=40;     
-[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]); %Ò»°ãx±ä»¯£¬yºÍzÒªÃ´Ò»Æð¸ú×Å±ä»¯£¬ÒªÃ´Ò»Ö±±£³ÖÎª0.5
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]); 
+points=1:1:length(t);    
 plot(t,y(:,1),'rh:','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
-%stem(t,y(:,1),'rh-','linewidth',1,'markersize',5,'markerfacecolor','r'); %Æ½Ãæ»ð²ñ¹÷Í¼
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
+%stem(t,y(:,1),'rh-','linewidth',1,'markersize',5,'markerfacecolor','r');    
+   
+   
+   
 hold on;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.5 0.5 0.5 0.5]);
 points=1:1:length(t);
@@ -1215,29 +1125,28 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,1),'mp:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
+   
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
+   
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
+   
 legend('x=0.2','x=0.5','x=0.7','x=0.9');
-title('{\it\fontname{Bodoni MT}x}²»Í¬Ê±µÄÑÝ»¯·ÂÕæÍ¼','position',[0.5 -0.15]','FontWeight','bold');
-%% Ìõ¼þ2£º2y-t,ÕâÀïÎÒÃÇÒÔ0.2,0.5,0.7,0.9ÎªÀý
+title('{\it\fontname{Bodoni MT}x}   ','position',[0.5 -0.15]','FontWeight','bold');
 clc,clear;
 figure(2);
-%ÏßÌõ
+   
 C1=20, C2=75, C3=120, C4=100, V=150,a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=50, Fi=50, T=40;    
-[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]); %Ò»°ãy±ä»¯£¬xºÍzÒªÃ´Ò»Æð¸ú×Å±ä»¯£¬ÒªÃ´Ò»Ö±±£³ÖÎª0.5
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]); 
+points=1:1:length(t);    
 plot(t,y(:,2),'rh:','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
+   
+   
+   
 hold on;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.5 0.5 0.5 0.5]);
 points=1:1:length(t);
@@ -1251,29 +1160,28 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,2),'mp:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
+   
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
+   
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
+   
 legend('y=0.2','y=0.5','y=0.7','y=0.9');
-title('{\it\fontname{Bodoni MT}y}²»Í¬Ê±µÄÑÝ»¯·ÂÕæÍ¼','position',[0.5 -0.15]','FontWeight','bold');
-%% Ìõ¼þ2£º3z-t,ÕâÀïÎÒÃÇÒÔ0.2,0.5,0.7,0.9ÎªÀý
+title('{\it\fontname{Bodoni MT}y}   ','position',[0.5 -0.15]','FontWeight','bold');
 clc,clear;
 figure(3);
-%ÏßÌõ
+   
 C1=20, C2=75, C3=120, C4=100, V=150,a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=50, Fi=50, T=40;     
-[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]); %Ò»°ãz±ä»¯£¬xºÍyÒªÃ´Ò»Æð¸ú×Å±ä»¯£¬ÒªÃ´Ò»Ö±±£³ÖÎª0.5
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]);    
+points=1:1:length(t);    
 plot(t,y(:,3),'rh:','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
+   
+   
+   
 hold on;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.5 0.5 0.5 0.5]);
 points=1:1:length(t);
@@ -1287,29 +1195,28 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,3),'mp:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
+   
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
+   
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
+   
 legend('z=0.2','z=0.5','z=0.7','z=0.9');
-title('{\it\fontname{Bodoni MT}z}²»Í¬Ê±µÄÑÝ»¯·ÂÕæÍ¼','position',[0.5 -0.15]','FontWeight','bold');
-%% Ìõ¼þ2£º4w-t,ÕâÀïÎÒÃÇÒÔ0.2,0.5,0.7,0.9ÎªÀý
+title('{\it\fontname{Bodoni MT}z}   ','position',[0.5 -0.15]','FontWeight','bold');
 clc,clear;
 figure(4);
-%ÏßÌõ
+   
 C1=20, C2=75, C3=120, C4=100, V=150,a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=50, Fi=50, T=40;     
-[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]); %Ò»°ãz±ä»¯£¬xºÍyÒªÃ´Ò»Æð¸ú×Å±ä»¯£¬ÒªÃ´Ò»Ö±±£³ÖÎª0.5
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]);    
+points=1:1:length(t);    
 plot(t,y(:,4),'rh:','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
+   
+   
+   
 hold on;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.5 0.5 0.5 0.5]);
 points=1:1:length(t);
@@ -1323,32 +1230,31 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,4),'mp:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
+   
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
+   
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
+   
 legend('w=0.2','w=0.5','w=0.7','w=0.9');
-title('{\it\fontname{Bodoni MT}w}²»Í¬Ê±µÄÑÝ»¯·ÂÕæÍ¼','position',[0.5 -0.15]','FontWeight','bold');
+title('{\it\fontname{Bodoni MT}w}   ','position',[0.5 -0.15]','FontWeight','bold');
 
-%% Ìõ¼þ3
-%%Ìõ¼þ3£ºÆ½Ãæx-t
+
 clc,clear;
 figure(1);
-%ÏßÌõ
+   
 C1=15, C2=100, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;     
-[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]); %Ò»°ãx±ä»¯£¬yºÍzÒªÃ´Ò»Æð¸ú×Å±ä»¯£¬ÒªÃ´Ò»Ö±±£³ÖÎª0.5
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]); 
+points=1:1:length(t);    
 plot(t,y(:,1),'rh:','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
-%stem(t,y(:,1),'rh-','linewidth',1,'markersize',5,'markerfacecolor','r'); %Æ½Ãæ»ð²ñ¹÷Í¼
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
+%stem(t,y(:,1),'rh-','linewidth',1,'markersize',5,'markerfacecolor','r');    
+   
+   
+   
 hold on;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.5 0.5 0.5 0.5]);
 points=1:1:length(t);
@@ -1362,29 +1268,28 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,1),'mp:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
+   
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
+   
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
+   
 legend('x=0.2','x=0.5','x=0.7','x=0.9');
-title('{\it\fontname{Bodoni MT}x}²»Í¬Ê±µÄÑÝ»¯·ÂÕæÍ¼','position',[0.5 -0.15]','FontWeight','bold');
-%% Ìõ¼þ3£º2y-t,ÕâÀïÎÒÃÇÒÔ0.2,0.5,0.7,0.9ÎªÀý
+title('{\it\fontname{Bodoni MT}x}   ','position',[0.5 -0.15]','FontWeight','bold');
 clc,clear;
 figure(2);
-%ÏßÌõ
+   
 C1=15, C2=100, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;    
-[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]); %Ò»°ãy±ä»¯£¬xºÍzÒªÃ´Ò»Æð¸ú×Å±ä»¯£¬ÒªÃ´Ò»Ö±±£³ÖÎª0.5
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]); 
+points=1:1:length(t);    
 plot(t,y(:,2),'rh:','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
+   
+   
+   
 hold on;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.5 0.5 0.5 0.5]);
 points=1:1:length(t);
@@ -1398,29 +1303,28 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,2),'mp:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
+   
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
+   
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
+   
 legend('y=0.2','y=0.5','y=0.7','y=0.9');
-title('{\it\fontname{Bodoni MT}y}²»Í¬Ê±µÄÑÝ»¯·ÂÕæÍ¼','position',[0.5 -0.15]','FontWeight','bold');
-%% Ìõ¼þ3£º3z-t,ÕâÀïÎÒÃÇÒÔ0.2,0.5,0.7,0.9ÎªÀý
+title('{\it\fontname{Bodoni MT}y}   ','position',[0.5 -0.15]','FontWeight','bold');
 clc,clear;
 figure(3);
-%ÏßÌõ
+   
 C1=15, C2=100, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;     
-[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]); %Ò»°ãz±ä»¯£¬xºÍyÒªÃ´Ò»Æð¸ú×Å±ä»¯£¬ÒªÃ´Ò»Ö±±£³ÖÎª0.5
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]);    
+points=1:1:length(t);    
 plot(t,y(:,3),'rh:','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
+   
+   
+   
 hold on;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.5 0.5 0.5 0.5]);
 points=1:1:length(t);
@@ -1434,29 +1338,29 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,3),'mp:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
+   
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
+   
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
+   
 legend('z=0.2','z=0.5','z=0.7','z=0.9');
-title('{\it\fontname{Bodoni MT}z}²»Í¬Ê±µÄÑÝ»¯·ÂÕæÍ¼','position',[0.5 -0.15]','FontWeight','bold');
-%% Ìõ¼þ3£º4w-t,ÕâÀïÎÒÃÇÒÔ0.2,0.5,0.7,0.9ÎªÀý
+title('{\it\fontname{Bodoni MT}z}   ','position',[0.5 -0.15]','FontWeight','bold');
+
 clc,clear;
 figure(4);
-%ÏßÌõ
+   
 C1=15, C2=100, C3=120, C4=100, V=150, a=0.2, b=0.8, Fa=60, Rd=50, Rg=80, L=70, Fi=50, T=40;     
-[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]); %Ò»°ãz±ä»¯£¬xºÍyÒªÃ´Ò»Æð¸ú×Å±ä»¯£¬ÒªÃ´Ò»Ö±±£³ÖÎª0.5
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]);    
+points=1:1:length(t);    
 plot(t,y(:,4),'rh:','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
+   
+   
+   
 hold on;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.5 0.5 0.5 0.5]);
 points=1:1:length(t);
@@ -1470,32 +1374,31 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,4),'mp:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
+   
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
+   
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
+   
 legend('w=0.2','w=0.5','w=0.7','w=0.9');
-title('{\it\fontname{Bodoni MT}w}²»Í¬Ê±µÄÑÝ»¯·ÂÕæÍ¼','position',[0.5 -0.15]','FontWeight','bold');
+title('{\it\fontname{Bodoni MT}w}   ','position',[0.5 -0.15]','FontWeight','bold');
 
-%% Ìõ¼þ4
-%%Ìõ¼þ4£ºÆ½Ãæx-t
+
 clc,clear;
 figure(1);
-%ÏßÌõ
+   
 C1=10, C2=70, C3=105, C4=100, V=150, a=0.3, b=0.9, Fa=30, Rd=50, Rg=80, L=90, Fi=50, T=40;     
-[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]); %Ò»°ãx±ä»¯£¬yºÍzÒªÃ´Ò»Æð¸ú×Å±ä»¯£¬ÒªÃ´Ò»Ö±±£³ÖÎª0.5
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]); 
+points=1:1:length(t);    
 plot(t,y(:,1),'rh:','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
-%stem(t,y(:,1),'rh-','linewidth',1,'markersize',5,'markerfacecolor','r'); %Æ½Ãæ»ð²ñ¹÷Í¼
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
+%stem(t,y(:,1),'rh-','linewidth',1,'markersize',5,'markerfacecolor','r');    
+   
+   
+   
 hold on;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.5 0.5 0.5 0.5]);
 points=1:1:length(t);
@@ -1509,29 +1412,29 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,1),'mp:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
+   
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
+   
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
+   
 legend('x=0.2','x=0.5','x=0.7','x=0.9');
-title('{\it\fontname{Bodoni MT}x}²»Í¬Ê±µÄÑÝ»¯·ÂÕæÍ¼','position',[0.5 -0.15]','FontWeight','bold');
-%% Ìõ¼þ4£º2y-t,ÕâÀïÎÒÃÇÒÔ0.2,0.5,0.7,0.9ÎªÀý
+title('{\it\fontname{Bodoni MT}x}   ','position',[0.5 -0.15]','FontWeight','bold');
+
 clc,clear;
 figure(2);
-%ÏßÌõ
+   
 C1=10, C2=70, C3=105, C4=100, V=150, a=0.3, b=0.9, Fa=30, Rd=50, Rg=80, L=90, Fi=50, T=40;    
-[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]); %Ò»°ãy±ä»¯£¬xºÍzÒªÃ´Ò»Æð¸ú×Å±ä»¯£¬ÒªÃ´Ò»Ö±±£³ÖÎª0.5
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]); 
+points=1:1:length(t);    
 plot(t,y(:,2),'rh:','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
+   
+   
+   
 hold on;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.5 0.5 0.5 0.5]);
 points=1:1:length(t);
@@ -1545,29 +1448,28 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,2),'mp:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
+   
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
+   
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
+   
 legend('y=0.2','y=0.5','y=0.7','y=0.9');
-title('{\it\fontname{Bodoni MT}y}²»Í¬Ê±µÄÑÝ»¯·ÂÕæÍ¼','position',[0.5 -0.15]','FontWeight','bold');
-%% Ìõ¼þ4£º3z-t,ÕâÀïÎÒÃÇÒÔ0.2,0.5,0.7,0.9ÎªÀý
+title('{\it\fontname{Bodoni MT}y}   ','position',[0.5 -0.15]','FontWeight','bold');
 clc,clear;
 figure(3);
-%ÏßÌõ
+   
 C1=10, C2=70, C3=105, C4=100, V=150, a=0.3, b=0.9, Fa=30, Rd=50, Rg=80, L=90, Fi=50, T=40;     
-[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]); %Ò»°ãz±ä»¯£¬xºÍyÒªÃ´Ò»Æð¸ú×Å±ä»¯£¬ÒªÃ´Ò»Ö±±£³ÖÎª0.5
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]);    
+points=1:1:length(t);    
 plot(t,y(:,3),'rh:','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
+   
+   
+   
 hold on;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.5 0.5 0.5 0.5]);
 points=1:1:length(t);
@@ -1581,29 +1483,28 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,3),'mp:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
+   
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
+   
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
+   
 legend('z=0.2','z=0.5','z=0.7','z=0.9');
-title('{\it\fontname{Bodoni MT}z}²»Í¬Ê±µÄÑÝ»¯·ÂÕæÍ¼','position',[0.5 -0.15]','FontWeight','bold');
-%% Ìõ¼þ4£º4w-t,ÕâÀïÎÒÃÇÒÔ0.2,0.5,0.7,0.9ÎªÀý
+title('{\it\fontname{Bodoni MT}z}   ','position',[0.5 -0.15]','FontWeight','bold');
 clc,clear;
 figure(4);
-%ÏßÌõ
+   
 C1=10, C2=70, C3=105, C4=100, V=150, a=0.3, b=0.9, Fa=30, Rd=50, Rg=80, L=90, Fi=50, T=40;     
-[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]); %Ò»°ãz±ä»¯£¬xºÍyÒªÃ´Ò»Æð¸ú×Å±ä»¯£¬ÒªÃ´Ò»Ö±±£³ÖÎª0.5
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]);    
+points=1:1:length(t);    
 plot(t,y(:,4),'rh:','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
+   
+   
+   
 hold on;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.5 0.5 0.5 0.5]);
 points=1:1:length(t);
@@ -1617,26 +1518,26 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,4),'mp:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
+   
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
+   
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
+   
 legend('w=0.2','w=0.5','w=0.7','w=0.9');
-title('{\it\fontname{Bodoni MT}w}²»Í¬Ê±µÄÑÝ»¯·ÂÕæÍ¼','position',[0.5 -0.15]','FontWeight','bold');
+title('{\it\fontname{Bodoni MT}w}   ','position',[0.5 -0.15]','FontWeight','bold');
 
-%% Ìõ¼þ1£º4x-y-z-t ,ÕâÀïÎÒÃÇÒÔ0.2,0.5,0.7£¬0.9ÎªÀý
+
 clc,clear;
 figure(4);
-%xµÄÏßÌõ
+
 Rp=150,Cph=85,Cpl=0,Cp=10,Bt=40,Fp=40,Mp=20,Ct=10,Ft=20,Mt=15,Cg=15,Tg=40;     
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.2 0.2 0.2]); 
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+points=1:1:length(t);    
 plot(t,y(:,1),'rh-','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
 hold on;
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.5 0.5 0.5]);
@@ -1647,9 +1548,9 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,1),'b:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%yµÄÏßÌõ
+
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.2 0.2 0.2]); 
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+points=1:1:length(t);    
 plot(t,y(:,2),'rh','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
 hold on;
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.5 0.5 0.5]);
@@ -1660,9 +1561,9 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,2),'go','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%zµÄÏßÌõ
+
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.2 0.2 0.2]); 
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+points=1:1:length(t);    
 plot(t,y(:,3),'rh','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
 hold on;
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.5 0.5 0.5]);
@@ -1673,26 +1574,24 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,3),'go','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
+   
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
+   
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
+   
 legend('x=y=z=0.2','x=y=z=0.5','x=y=z=0.7');
-title('Èý·½Ö÷Ìå²»Í¬Ê±µÄÑÝ»¯·ÂÕæÍ¼','position',[0.5 -0.15]','FontWeight','bold');
+title('third party   ','position',[0.5 -0.15]','FontWeight','bold');
 
-%% Ìõ¼þ1£º4x-y-z-t ,ÕâÀïÎÒÃÇÒÔ0.2,0.5,0.7£¬0.9ÎªÀý
 clc,clear;
 figure(4);
-%xµÄÏßÌõ
 Rp=150,Cph=85,Cpl=0,Cp=10,Bt=40,Fp=40,Mp=20,Ct=10,Ft=20,Mt=15,Cg=15,Tg=40;     
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.2 0.2 0.2]); 
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+points=1:1:length(t);    
 plot(t,y(:,1),'rh-','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
 hold on;
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.5 0.5 0.5]);
@@ -1703,9 +1602,8 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,1),'b:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%yµÄÏßÌõ
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.2 0.2 0.2]); 
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+points=1:1:length(t);    
 plot(t,y(:,2),'rh','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
 hold on;
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.5 0.5 0.5]);
@@ -1716,9 +1614,8 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,2),'go','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%zµÄÏßÌõ
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.2 0.2 0.2]); 
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+points=1:1:length(t);    
 plot(t,y(:,3),'rh','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
 hold on;
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.5 0.5 0.5]);
@@ -1729,26 +1626,25 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,3),'go','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
+   
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
+   
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
+   
 legend('x=y=z=0.2','x=y=z=0.5','x=y=z=0.7');
-title('Èý·½Ö÷Ìå²»Í¬Ê±µÄÑÝ»¯·ÂÕæÍ¼','position',[0.5 -0.15]','FontWeight','bold');
+title('  third party   ','position',[0.5 -0.15]','FontWeight','bold');
 
-%% Ìõ¼þ1£º4x-y-z-t ,ÕâÀïÎÒÃÇÒÔ0.2,0.5,0.7£¬0.9ÎªÀý
 clc,clear;
 figure(4);
-%xµÄÏßÌõ
+ 
 Rp=150,Cph=85,Cpl=0,Cp=10,Bt=40,Fp=40,Mp=20,Ct=10,Ft=20,Mt=15,Cg=15,Tg=40;     
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.2 0.2 0.2]); 
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+points=1:1:length(t);    
 plot(t,y(:,1),'rh-','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
 hold on;
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.5 0.5 0.5]);
@@ -1759,9 +1655,9 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,1),'b:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%yµÄÏßÌõ
+  
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.2 0.2 0.2]); 
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+points=1:1:length(t);    
 plot(t,y(:,2),'rh','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
 hold on;
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.5 0.5 0.5]);
@@ -1772,9 +1668,9 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,2),'go','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%zµÄÏßÌõ
+  
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.2 0.2 0.2]); 
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+points=1:1:length(t);    
 plot(t,y(:,3),'rh','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
 hold on;
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.5 0.5 0.5]);
@@ -1785,26 +1681,26 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,3),'go','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
+   
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
+   
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
+   
 legend('x=y=z=0.2','x=y=z=0.5','x=y=z=0.7');
-title('Èý·½Ö÷Ìå²»Í¬Ê±µÄÑÝ»¯·ÂÕæÍ¼','position',[0.5 -0.15]','FontWeight','bold');
+title('  third party   ','position',[0.5 -0.15]','FontWeight','bold');
 
-%% Ìõ¼þ4£º4x-y-z-t ,ÕâÀïÎÒÃÇÒÔ0.2,0.5,0.7£¬0.9ÎªÀý
+  
 clc,clear;
 figure(4);
-%xµÄÏßÌõ
+ 
 C1=10, C2=70, C3=105, C4=100, V=150, a=0.3, b=0.9, Fa=30, Rd=50, Rg=80, L=90, Fi=50, T=40;     
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]); 
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+points=1:1:length(t);    
 plot(t,y(:,1),'rh-','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
 hold on;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.5 0.5 0.5 0.5]);
@@ -1819,9 +1715,9 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,1),'b:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%yµÄÏßÌõ
+  
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]); 
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+points=1:1:length(t);    
 plot(t,y(:,2),'rh','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
 hold on;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.5 0.5 0.5 0.5]);
@@ -1836,9 +1732,9 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,2),'go','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%zµÄÏßÌõ
+  
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]); 
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+points=1:1:length(t);    
 plot(t,y(:,3),'rh','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
 hold on;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.5 0.5 0.5 0.5]);
@@ -1853,9 +1749,9 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,3),'go','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%wµÄÏßÌõ
+
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2 0.2]); 
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+points=1:1:length(t);    
 plot(t,y(:,4),'rh','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
 hold on;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.5 0.5 0.5 0.5]);
@@ -1870,34 +1766,32 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,4),'go','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
+   
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
+   
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
+   
 legend('x=y=z=w=0.2','x=y=z=w=0.5','x=y=z=w=0.7','x=y=z=w=0.9');
-title('ËÄ·½Ö÷Ìå²»Í¬Ê±µÄÑÝ»¯·ÂÕæÍ¼','position',[0.5 -0.15]','FontWeight','bold');
+title('four party   ','position',[0.5 -0.15]','FontWeight','bold');
 
 
-%% 5Ç×°®µÄ´ïÍßÀïÊÏ£¬ÎÒÏë°ÑÕâËÄ·ùÍ¼·ÅÔÚÒ»ÕÅÍ¼ÉÏ£¬°²ÅÅ£¬×ÓÍ¼²¿·Ö
-% 5ÒÔÍ¼5ÎªÀý£¬Ò»ÖÖÊÇ¸Ä±äx,y,zµÄ³õÊ¼Öµ£¬³õÊ¼Öµ³£¼ûÈ¡ÖµÎª0.5,0.2,0.1,0.9£¬ÕâÀïÎÒÃÇÒÔ0.2,0.5,0.7ÎªÀý
-% Æ½Ãæx-t
+
 clc,clear;
 figure(5)
-subplot(2,2,1); %½«ºóÃæµÄfigureº¯ÊýÌæ»»£¬²¢Ö»ÁôÒ»¸ö±êÌâtitle 
-%ÏßÌõ
+subplot(2,2,1); 
+   
 C1=15,C2=95,C3=120,C4=100,V=150,a=0.2,b=0.8,E1=200,E2=100,Fa=60,Rd=50,Rg=80,L=50,Fi=50,T=40;     
-[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,E1,E2,Fa,Rd,Rg,L,Fi,T),[0 1],[0.2 0.2 0.2]); %Ò»°ãx±ä»¯£¬yºÍzÒªÃ´Ò»Æð¸ú×Å±ä»¯£¬ÒªÃ´Ò»Ö±±£³ÖÎª0.5
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,E1,E2,Fa,Rd,Rg,L,Fi,T),[0 1],[0.2 0.2 0.2]);
+points=1:1:length(t);    
 plot(t,y(:,1),'rh-','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
+   
+   
+   
 hold on;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,E1,E2,Fa,Rd,Rg,L,Fi,T),[0 1],[0.5 0.5 0.5]);
 points=1:1:length(t);
@@ -1907,28 +1801,28 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,1),'b:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
+   
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
+   
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
+   
 legend('x=0.2','x=0.5','x=0.7');
-% 5 y-t,ÕâÀïÎÒÃÇÒÔ0.2,0.5,0.7ÎªÀý
+
 clc,clear;
-subplot(2,2,2); %½«figureº¯ÊýÌæ»»
-%ÏßÌõ
+subplot(2,2,2); 
+   
 C1=15,C2=95,C3=120,C4=100,V=150,a=0.2,b=0.8,E1=200,E2=100,Fa=60,Rd=50,Rg=80,L=50,Fi=50,T=40;     
-[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,E1,E2,Fa,Rd,Rg,L,Fi,T),[0 1],[0.2 0.2 0.2]); %Ò»°ãy±ä»¯£¬xºÍzÒªÃ´Ò»Æð¸ú×Å±ä»¯£¬ÒªÃ´Ò»Ö±±£³ÖÎª0.5
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,E1,E2,Fa,Rd,Rg,L,Fi,T),[0 1],[0.2 0.2 0.2]); 
+points=1:1:length(t);    
 plot(t,y(:,2),'rh','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
+   
+   
+   
 hold on;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,E1,E2,Fa,Rd,Rg,L,Fi,T),[0 1],[0.5 0.5 0.5]);
 points=1:1:length(t);
@@ -1938,28 +1832,28 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,2),'go','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
+   
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
+   
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
+   
 legend('y=0.2','y=0.5','y=0.7');
-% 5 z-t,ÕâÀïÎÒÃÇÒÔ0.2,0.5,0.7ÎªÀý
+
 clc,clear;
-subplot(2,2,3); %½«figureº¯ÊýÌæ»»
-%ÏßÌõ
+subplot(2,2,3); 
+   
 C1=15,C2=95,C3=120,C4=100,V=150,a=0.2,b=0.8,E1=200,E2=100,Fa=60,Rd=50,Rg=80,L=50,Fi=50,T=40;     
-[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,E1,E2,Fa,Rd,Rg,L,Fi,T),[0 1],[0.2 0.2 0.2]); %Ò»°ãz±ä»¯£¬xºÍyÒªÃ´Ò»Æð¸ú×Å±ä»¯£¬ÒªÃ´Ò»Ö±±£³ÖÎª0.5
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,E1,E2,Fa,Rd,Rg,L,Fi,T),[0 1],[0.2 0.2 0.2]);    
+points=1:1:length(t);    
 plot(t,y(:,3),'rh','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
+   
+   
+   
 hold on;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,E1,E2,Fa,Rd,Rg,L,Fi,T),[0 1],[0.5 0.5 0.5]);
 points=1:1:length(t);
@@ -1969,28 +1863,28 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,3),'go','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
+   
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
+   
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
+   
 legend('z=0.2','z=0.5','z=0.7');
-% 5 w-t,ÕâÀïÎÒÃÇÒÔ0.2,0.5,0.7ÎªÀý
+
 clc,clear;
-subplot(2,2,3); %½«figureº¯ÊýÌæ»»
-%ÏßÌõ
+subplot(2,2,3); 
+   
 C1=15,C2=95,C3=120,C4=100,V=150,a=0.2,b=0.8,E1=200,E2=100,Fa=60,Rd=50,Rg=80,L=50,Fi=50,T=40;     
-[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,E1,E2,Fa,Rd,Rg,L,Fi,T),[0 1],[0.2 0.2 0.2]); %Ò»°ãz±ä»¯£¬xºÍyÒªÃ´Ò»Æð¸ú×Å±ä»¯£¬ÒªÃ´Ò»Ö±±£³ÖÎª0.5
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+[t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,E1,E2,Fa,Rd,Rg,L,Fi,T),[0 1],[0.2 0.2 0.2]);    
+points=1:1:length(t);    
 plot(t,y(:,3),'rh','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
-%MATLAB³£ÓÃÏßÐÍ£º-ÊµÏß£¨Ä¬ÈÏ£©£»--Ë«»®Ïß£»:ÐéÏß£»:.µã»®Ïß¡££¨Ó¢ÎÄ×Ö·û£©
-%MATLAB³£ÓÃÑÕÉ«£ºrºìÉ«£»gÂÌÉ«£»bÀ¶É«£»cÇàÂÌÉ«£»mÑóºìÉ«£»y»ÆÉ«£»kºÚÉ«£»w°×É«¡£
-%MATLAB³£ÓÃµã±ê¼Ç·û£º+¼ÓºÅ£»oÔ²È¦£»*ÐÇºÅ£».Êµµã£»x²æºÅ£»sÕý·½ÐÎ£»dÁâÐÎ£»^ÉÏÈý½Ç£»vÏÂÈý½Ç£»>ÓÒÈý½Ç£»<×óÈý½Ç£»pÎå½ÇÐÇ£¬hÁùÃ¢ÐÇ¡£
+   
+   
+   
 hold on;
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,E1,E2,Fa,Rd,Rg,L,Fi,T),[0 1],[0.5 0.5 0.5]);
 points=1:1:length(t);
@@ -2000,24 +1894,24 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,3),'go','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
+   
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
+   
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
+   
 legend('w=0.2','w=0.5','w=0.7');
-%5 x-y-z-t ,ÕâÀïÎÒÃÇÒÔ0.2,0.5,0.7ÎªÀý
+  
 clc,clear;
-subplot(2,2,4); %½«figureº¯ÊýÌæ»»
-%xµÄÏßÌõ
+subplot(2,2,4);   
+ 
 C1=15,C2=95,C3=120,C4=100,V=150,a=0.2,b=0.8,E1=200,E2=100,Fa=60,Rd=50,Rg=80,L=50,Fi=50,T=40;     
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.2 0.2 0.2]); 
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+points=1:1:length(t);    
 plot(t,y(:,1),'rh-','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
 hold on;
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.5 0.5 0.5]);
@@ -2028,9 +1922,9 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,1),'b:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%yµÄÏßÌõ
+  
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.2 0.2 0.2]); 
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+points=1:1:length(t);    
 plot(t,y(:,2),'rh','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
 hold on;
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.5 0.5 0.5]);
@@ -2041,9 +1935,9 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,2),'go','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%zµÄÏßÌõ
+  
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.2 0.2 0.2]); 
-points=1:1:length(t); %ÖÐ¼äµÄ1¸ÄÎª´óÒ»µãµÄÕýÕûÊý£¬ÄÇÃ´Í¼ÏóÉÏµÄµã¾Í»á±äµÃÏ¡Êè
+points=1:1:length(t);    
 plot(t,y(:,3),'rh','linewidth',1,'markersize',5,'markerfacecolor','r','markerindices',points);
 hold on;
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.5 0.5 0.5]);
@@ -2054,23 +1948,22 @@ hold on;
 points=1:1:length(t);
 plot(t,y(:,3),'go','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
+   
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
+   
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
+   
 legend('x=y=z=0.2','x=y=z=0.5','x=y=z=0.7');
-title('Èý·½Ö÷Ìå²»Í¬Ê±µÄÑÝ»¯·ÂÕæÍ¼','position',[0.5 -0.15]','FontWeight','bold');
-%% ÁíÒ»ÖÖÊÇ¸Ä±äÄ³¸ö»òÄ³Á½¸ö²ÎÊýÖµ£¬ÕâÀïÒÔRp=100,150,200ÎªÀý£¬x,y,zµÄ³õÊ¼ÖµÄ¬ÈÏÎª0.2
-%% 6Æ½Ãæx-t
+title('  third party   ','position',[0.5 -0.15]','FontWeight','bold');
+
 clc,clear;
 figure(6);
-%ÏßÌõ
+   
 C1=15,C2=95,C3=120,C4=100,V=150,a=0.2,b=0.8,E1=200,E2=100,Fa=60,Rd=50,Rg=80,L=50,Fi=50,T=40;     
 [t,y]=ode45(@(t,y) sifang(t,y,C1,C2,C3,C4,V,a,b,Fa,Rd,L,Fi,T),[0 1],[0.2 0.2 0.2]); 
 points=1:1:length(t); 
@@ -2091,22 +1984,21 @@ C1=15,C2=95,C3=120,C4=100,V=150,a=0.2,b=0.8,E1=200,E2=100,Fa=60,Rd=50,Rg=80,L=50
 points=1:1:length(t);
 plot(t,y(:,1),'b:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
+   
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
+   
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
+   
 legend('R_{p}=100','R_{p}=150','R_{p}=200');
-title('{\it\fontname{Bodoni MT}R_{p}}²»Í¬Ê±¶Ô{\it\fontname{Bodoni MT}X}µÄÑÝ»¯·ÂÕæÍ¼','position',[0.5 -0.15]','FontWeight','bold');
-%% 7Æ½Ãæy-t
+title('{\it\fontname{Bodoni MT}R_{p}}Different time{\it\fontname{Bodoni MT}X}evolution figure','position',[0.5 -0.15]','FontWeight','bold');
 clc,clear;
 figure(7);
-%ÏßÌõ
+   
 Rp=100,Cph=85,Cpl=0,Cp=10,Bt=40,Fp=40,Mp=20,Ct=10,Ft=20,Mt=15,Cg=15,Tg=40;     
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.2 0.2 0.2]); 
 points=1:1:length(t); 
@@ -2122,22 +2014,21 @@ Rp=200,Cph=85,Cpl=0,Cp=10,Bt=40,Fp=40,Mp=20,Ct=10,Ft=20,Mt=15,Cg=15,Tg=40;
 points=1:1:length(t);
 plot(t,y(:,2),'b:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
+   
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
+   
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
+   
 legend('R_{p}=100','R_{p}=150','R_{p}=200');
-title('{\it\fontname{Bodoni MT}R_{p}}²»Í¬Ê±¶Ô{\it\fontname{Bodoni MT}Y}µÄÑÝ»¯·ÂÕæÍ¼','position',[0.5 -0.15]','FontWeight','bold');
-%% 8Æ½Ãæz-t
+title('{\it\fontname{Bodoni MT}R_{p}}Different time{\it\fontname{Bodoni MT}Y}evolution figure','position',[0.5 -0.15]','FontWeight','bold');
 clc,clear;
 figure(8);
-%ÏßÌõ
+   
 Rp=100,Cph=85,Cpl=0,Cp=10,Bt=40,Fp=40,Mp=20,Ct=10,Ft=20,Mt=15,Cg=15,Tg=40;     
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.2 0.2 0.2]); 
 points=1:1:length(t); 
@@ -2153,23 +2044,20 @@ Rp=200,Cph=85,Cpl=0,Cp=10,Bt=40,Fp=40,Mp=20,Ct=10,Ft=20,Mt=15,Cg=15,Tg=40;
 points=1:1:length(t);
 plot(t,y(:,3),'b:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
+   
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
+   
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
+   
 legend('R_{p}=100','R_{p}=150','R_{p}=200');
-title('{\it\fontname{Bodoni MT}R_{p}}²»Í¬Ê±¶Ô{\it\fontname{Bodoni MT}Z}µÄÑÝ»¯·ÂÕæÍ¼','position',[0.5 -0.15]','FontWeight','bold');
-%% 9´ïÍßÀïÊÏ£¬¼ÌÐø·ÅÔÚÒ»ÕÅÍ¼ÉÏ°É~
-% 9Æ½Ãæx-t
+title('{\it\fontname{Bodoni MT}R_{p}}Different time{\it\fontname{Bodoni MT}Z}evolution figure','position',[0.5 -0.15]','FontWeight','bold');
 clc,clear;
 figure(9);
-%xÏßÌõ
 Rp=100,Cph=85,Cpl=0,Cp=10,Bt=40,Fp=40,Mp=20,Ct=10,Ft=20,Mt=15,Cg=15,Tg=40;     
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.2 0.2 0.2]); 
 points=1:1:length(t); 
@@ -2185,8 +2073,7 @@ Rp=200,Cph=85,Cpl=0,Cp=10,Bt=40,Fp=40,Mp=20,Ct=10,Ft=20,Mt=15,Cg=15,Tg=40;
 points=1:1:length(t);
 plot(t,y(:,1),'b:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-% 9Æ½Ãæy-t
-%yÏßÌõ
+
 Rp=100,Cph=85,Cpl=0,Cp=10,Bt=40,Fp=40,Mp=20,Ct=10,Ft=20,Mt=15,Cg=15,Tg=40;     
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.2 0.2 0.2]); 
 points=1:1:length(t); 
@@ -2202,8 +2089,7 @@ Rp=200,Cph=85,Cpl=0,Cp=10,Bt=40,Fp=40,Mp=20,Ct=10,Ft=20,Mt=15,Cg=15,Tg=40;
 points=1:1:length(t);
 plot(t,y(:,2),'b:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-% 9Æ½Ãæz-t
-%zÏßÌõ
+
 Rp=100,Cph=85,Cpl=0,Cp=10,Bt=40,Fp=40,Mp=20,Ct=10,Ft=20,Mt=15,Cg=15,Tg=40;     
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.2 0.2 0.2]); 
 points=1:1:length(t); 
@@ -2219,24 +2105,22 @@ Rp=200,Cph=85,Cpl=0,Cp=10,Bt=40,Fp=40,Mp=20,Ct=10,Ft=20,Mt=15,Cg=15,Tg=40;
 points=1:1:length(t);
 plot(t,y(:,3),'b:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
+   
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
+   
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
+   
 legend('R_{p}=100','R_{p}=150','R_{p}=200');
-title('{\it\fontname{Bodoni MT}R_{p}}²»Í¬Ê±¶Ô²©ÞÄÖ÷ÌåµÄÑÝ»¯·ÂÕæÍ¼','position',[0.5 -0.15]','FontWeight','bold');
-%% 10Ç×£¬¼ÌÐøÒÔ×ÓÍ¼ÐÎÊ½·ÅÔÚÒ»ÕÅÍ¼ÉÏ
-% 6Æ½Ãæx-t
+title('{\it\fontname{Bodoni MT}R_{p}}Different time game body','position',[0.5 -0.15]','FontWeight','bold');
+
 clc,clear;
 figure(10);
 subplot(2,2,1);
-%xÏßÌõ
 Rp=100,Cph=85,Cpl=0,Cp=10,Bt=40,Fp=40,Mp=20,Ct=10,Ft=20,Mt=15,Cg=15,Tg=40;     
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.2 0.2 0.2]); 
 points=1:1:length(t); 
@@ -2252,20 +2136,20 @@ Rp=200,Cph=85,Cpl=0,Cp=10,Bt=40,Fp=40,Mp=20,Ct=10,Ft=20,Mt=15,Cg=15,Tg=40;
 points=1:1:length(t);
 plot(t,y(:,1),'b:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
+   
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
+   
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
+   
 legend('R_{p}=100','R_{p}=150','R_{p}=200');
-% 7Æ½Ãæy-t
+
 subplot(2,2,2);
-%yÏßÌõ
+
 Rp=100,Cph=85,Cpl=0,Cp=10,Bt=40,Fp=40,Mp=20,Ct=10,Ft=20,Mt=15,Cg=15,Tg=40;     
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.2 0.2 0.2]); 
 points=1:1:length(t); 
@@ -2281,20 +2165,20 @@ Rp=200,Cph=85,Cpl=0,Cp=10,Bt=40,Fp=40,Mp=20,Ct=10,Ft=20,Mt=15,Cg=15,Tg=40;
 points=1:1:length(t);
 plot(t,y(:,2),'b:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
+   
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
+   
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
+   
 legend('R_{p}=100','R_{p}=150','R_{p}=200');
-% 8Æ½Ãæz-t
+
 subplot(2,2,3);
-%zÏßÌõ
+
 Rp=100,Cph=85,Cpl=0,Cp=10,Bt=40,Fp=40,Mp=20,Ct=10,Ft=20,Mt=15,Cg=15,Tg=40;     
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.2 0.2 0.2]); 
 points=1:1:length(t); 
@@ -2310,21 +2194,20 @@ Rp=200,Cph=85,Cpl=0,Cp=10,Bt=40,Fp=40,Mp=20,Ct=10,Ft=20,Mt=15,Cg=15,Tg=40;
 points=1:1:length(t);
 plot(t,y(:,3),'b:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
+   
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
+   
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
+   
 legend('R_{p}=100','R_{p}=150','R_{p}=200');
-% 9x-y-z-t
+
 subplot(2,2,4)
-% 9Æ½Ãæx-t
-%xÏßÌõ
+
 Rp=100,Cph=85,Cpl=0,Cp=10,Bt=40,Fp=40,Mp=20,Ct=10,Ft=20,Mt=15,Cg=15,Tg=40;     
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.2 0.2 0.2]); 
 points=1:1:length(t); 
@@ -2340,8 +2223,7 @@ Rp=200,Cph=85,Cpl=0,Cp=10,Bt=40,Fp=40,Mp=20,Ct=10,Ft=20,Mt=15,Cg=15,Tg=40;
 points=1:1:length(t);
 plot(t,y(:,1),'b:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-% 9Æ½Ãæy-t
-%yÏßÌõ
+
 Rp=100,Cph=85,Cpl=0,Cp=10,Bt=40,Fp=40,Mp=20,Ct=10,Ft=20,Mt=15,Cg=15,Tg=40;     
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.2 0.2 0.2]); 
 points=1:1:length(t); 
@@ -2357,8 +2239,7 @@ Rp=200,Cph=85,Cpl=0,Cp=10,Bt=40,Fp=40,Mp=20,Ct=10,Ft=20,Mt=15,Cg=15,Tg=40;
 points=1:1:length(t);
 plot(t,y(:,2),'b:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-% 9Æ½Ãæz-t
-%zÏßÌõ
+
 Rp=100,Cph=85,Cpl=0,Cp=10,Bt=40,Fp=40,Mp=20,Ct=10,Ft=20,Mt=15,Cg=15,Tg=40;     
 [t,y]=ode45(@(t,y) yaopin(t,y,Rp,Cph,Cpl,Cp,Bt,Fp,Mp,Ct,Ft,Mt,Cg,Tg),[0 1],[0.2 0.2 0.2]); 
 points=1:1:length(t); 
@@ -2374,15 +2255,15 @@ Rp=200,Cph=85,Cpl=0,Cp=10,Bt=40,Fp=40,Mp=20,Ct=10,Ft=20,Mt=15,Cg=15,Tg=40;
 points=1:1:length(t);
 plot(t,y(:,3),'b:','linewidth',1,'markersize',5,'markerindices',points);
 hold on;
-%°×µ×£¬Íø¸ñ
+   
 set(0,'defaultfigurecolor','w')
 grid on
 hold on
-%×ø±ê±ê×¢£¬¿Ì¶È¼ä¸ô¼°Çø¼ä
+   
 xlabel('$Time$','interpreter','latex','Rotation',0);
 ylabel('$Proportion$','interpreter','latex');
 set(gca,'XTick',[0:0.2:1],'YTick',[0:0.2:1])
 axis([0 1 0 1]);
-%Í¼Àý£¬±êÌâ
+   
 legend('R_{p}=100','R_{p}=150','R_{p}=200');
-title('{\it\fontname{Bodoni MT}R_{p}}²»Í¬Ê±¶Ô²©ÞÄÖ÷ÌåµÄÑÝ»¯·ÂÕæÍ¼','position',[0.5 -0.15]','FontWeight','bold');
+title('{\it\fontname{Bodoni MT}R_{p}}','position',[0.5 -0.15]','FontWeight','bold');
